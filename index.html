@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;300;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>HANGMAN</title>
+</head>
+<body>
+    <div class="container hide">
+        <div class="row">
+            <div class="col col-md-12 col-lg-12 col-xs-12">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-12 col-lg-12 col-xs-12">
+                <img src="icons/game-dark.svg"></img>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-12 col-lg-12 col-xs-12">
+                <button>ENTER THE GAME</button>
+            </div>
+        </div>
+    </div>
+    <div class="container game-container">
+        <div class="row">
+            <div class="col col-md-12 col-lg-12 col-xs-12">
+                <h1>HANGMAN</h1>
+                <h5>Find the word to save the man</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-12 col-lg-12 col-xs-12">
+                <div class="game">
+                    <svg class="figure-container" height="250" width="250">
+                        <!---Structure-->
+                        <line x1="60" y1="20" x2="140" y2="20" />
+                        <line x1="60" y1="20" x2="60" y2="200" />
+                        <line x1="50" y1="200" x2="200" y2="200" />
+                        <line x1="140" y1="20" x2="140" y2="40" />
+                        <!---Circle-->
+                        <circle cx="140" cy="55" r="15" class="figure-disp"/>
+                        <!---Body-->
+                        <line x1="140" y1="70" x2="140" y2="120" class="figure-disp"/>
+                        <!---Hands-->
+                        <line x1="140" y1="100" x2="120" y2="80"class="figure-disp" />
+                        <line x1="140" y1="100" x2="160" y2="80" class="figure-disp"/>
+                        <!---Legs-->
+                        <line x1="120" y1="140" x2="140" y2="120" class="figure-disp"/>
+                        <line x1="140" y1="120" x2="160" y2="140" class="figure-disp"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-12 col-md-6 col-lg-6 col-xs-6">
+                <div class="wrongletter-container" id="wrongletter-container">
+                    <div class="wrong-letter">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-12 col-md-6 col-lg-6 col-xs-6">
+                <p>Guess Box</p>
+                <hr>
+                <div class="word" id="word">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container winner-notification-container">
+            <div class="row">
+                <div class="col col-md-12 col-lg-12 col-xs-12">
+                    <div class="notification" id="notification">
+                        <div class="winner-box">
+                            <h2 class="winner"></h2>
+                            <button class="btn"id="play-again">PLAY AGAIN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="container popup-container">
+            <div class="row">
+                <div class="col col-md-12 col-lg-12 col-xs-12">
+                    <div class="popup" id="popup">
+                        <p>You have this letter already</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+</body>
+</html>
